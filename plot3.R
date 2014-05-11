@@ -12,7 +12,7 @@ household_power_consumption$DateTime <- strptime(paste(household_power_consumpti
 
 household_power_consumption <- household_power_consumption[household_power_consumption$DateTime>=StartDate & household_power_consumption$DateTime < EndDate,]
 
-png(filename="plot3.png")
+png(filename="plot3.png", width=480,height=480,units="px")
 
 plot(x=household_power_consumption$DateTime, y=household_power_consumption$Sub_metering_1, type="l", xlab="", ylab="Energy sub meeting")
 lines(x=household_power_consumption$DateTime, y=household_power_consumption$Sub_metering_2, col="red")

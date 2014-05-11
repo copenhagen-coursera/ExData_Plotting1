@@ -12,7 +12,7 @@ household_power_consumption$DateTime <- strptime(paste(household_power_consumpti
 
 household_power_consumption <- household_power_consumption[household_power_consumption$DateTime>=StartDate & household_power_consumption$DateTime < EndDate,]
 
-png(filename="plot1.png")
+png(filename="plot1.png", width=480,height=480,units="px")
 
 hist(x=as.numeric(household_power_consumption$Global_active_power), main = "Global Active Power", 
          xlab = "Global Active Power (kilowatts)", col = "red");

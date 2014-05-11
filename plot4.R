@@ -12,7 +12,7 @@ household_power_consumption$DateTime <- strptime(paste(household_power_consumpti
 
 household_power_consumption <- household_power_consumption[household_power_consumption$DateTime>=StartDate & household_power_consumption$DateTime < EndDate,]
 
-png(filename="plot4.png")
+png(filename="plot4.png", width=480,height=480,units="px")
 
 par(mfrow = c(2,2))
 
